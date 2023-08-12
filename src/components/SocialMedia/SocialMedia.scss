@@ -1,0 +1,44 @@
+@import '../../styles/variables.scss';
+
+.social {
+	display: flex;
+	gap: .5rem;
+	a {
+		display: block;
+		width: 3rem;
+		height: 3rem;
+		background-image: url('../../../public/images/icons/Social-Icons.jpg');
+		background-position-y: 76.5rem;
+		&:hover, &:focus {
+			background-position-y: 43.30rem;
+		}
+}
+
+	&__twitter {
+		background-position-x: -17.7rem;
+	}
+
+	&__facebook {
+		background-position-x: -11rem;
+	}
+
+	&__instagram {
+		background-position-x: -24rem;
+	}
+
+	&__telegram {
+		background-position-x: -50rem;
+	}
+}
+
+@media (max-width: 992px) {
+	.content__inspiration .social {
+		transform: scale(.75);
+	}
+}
+
+@media (max-width: 767px) {
+	.header__top .social {
+		display: none;
+	}
+}

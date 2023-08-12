@@ -1,0 +1,36 @@
+@import './variables.scss';
+
+// Google fonts
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300;700&family=Plus+Jakarta+Sans:wght@400;500&family=Prata&display=swap');
+
+
+* {
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body,
+#root,
+.app {
+	height: 100%;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+  font-family: $fontprimary;
+  background-color: $backgroung_main;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  a, a:hover, a:active a:visited{text-decoration: none; color:#000}
+	ul,li{list-style: none; padding: 0; margin: 0; border: 0;}
+	img{vertical-align: top;}
+	a:focus,a:active{outline: none;}
+}
+
+

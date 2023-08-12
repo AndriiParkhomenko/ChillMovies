@@ -1,0 +1,58 @@
+@import '../../styles/variables.scss';
+
+.articles-content{
+	margin: 5rem 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap:2rem;
+}
+
+.card-article{
+	margin-bottom: 2rem;
+	&__title {
+		white-space: nowrap;
+		overflow-x: hidden;
+		text-overflow: ellipsis;
+		opacity: .5;
+		&:hover{
+			opacity: 1;
+		}
+	}
+
+	&__description {
+		display: inline-block;
+		height: 5rem;
+	}
+}
+
+@media (max-width: 1400px) {
+	.articles-content{
+		justify-content: space-around;
+	}
+}
+
+@media (max-width: 1200px) {
+	.articles-content{
+		margin: 4rem 0;
+	}
+}
+
+@media (max-width: 992px) {
+	.articles-content{
+		margin: 3rem 0;
+	}
+}
+
+@media (max-width: 767px) {
+	.articles-content{
+		margin: 2rem 0;
+	}
+}
+
+@media (max-width: 576px) {
+	.articles-content{
+		margin: 2rem 0;
+	}
+}

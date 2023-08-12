@@ -1,0 +1,107 @@
+@import '../../styles/variables.scss';
+
+.headline {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	font-family: $fontprimary;
+	margin-bottom: 5rem;
+	span {
+		font-size: 1rem;
+		text-transform: uppercase;
+		color: $book_description;
+		font-family: $font_secondary;
+		line-height: 16px;
+		text-align: center;
+		letter-spacing: 0.12rem;
+		font-weight: 500;
+		margin-bottom: 2rem;
+	}
+	p {
+		position: relative;
+		padding: 0 3rem;
+		z-index: 2;
+		background: $backgroung_main;
+		text-align: center;
+		font-size: 4.8rem;
+		margin: 0 auto;
+	}
+	.headline-border{
+		position: relative;
+		height: 1px;
+		border-bottom: 1px solid $underline;
+		top: -3rem;
+		z-index: 1;
+	}
+}
+
+@media (max-width: 1400px) {
+	.headline {
+		margin-bottom: 3rem;
+		p {
+			font-size: 4.6rem;
+		}
+		.headline-border{
+			top: -3rem;
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.headline {
+		margin-bottom: 2rem;
+		span {
+			margin-bottom: 1rem;
+		}
+		p {
+			font-size: 4.4rem;
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.headline {
+		margin-bottom: 1.5rem;
+		span {
+			margin-bottom: .5rem;
+		}
+		p {
+			font-size: 3.5rem;
+		}
+		.headline-border{
+			top: -2.5rem;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.headline {
+		span {
+			margin-bottom: .5rem;
+			font-size: .9rem;
+		}
+		p {
+			font-size: 3rem;
+			padding: 0 1.5rem;
+		}
+		.headline-border{
+			top: -2rem;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.headline {
+		span {
+			margin-bottom: .5rem;
+			font-size: .75rem;
+		}
+		p {
+			font-size: 2.5rem;
+			padding: 0 1rem;
+		}
+		.headline-border{
+			top: -1.6rem;
+		}
+	}
+}

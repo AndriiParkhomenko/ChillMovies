@@ -1,0 +1,195 @@
+.bulb-animation {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	min-height: 60rem;
+	background: #222;
+	border-radius: 5rem;
+}
+
+.on {
+	background: radial-gradient(#555, #111);
+}
+
+.bulb {
+	position: relative;
+	width: 8rem;
+	height: 8rem;
+	background: #444;
+	margin: 0 1rem;
+	border-radius: 50%;
+	z-index: 2;
+	transition: transform 0.3s ease-in-out;
+}
+
+.on .bulb {
+	background: #fff;
+	box-shadow: 0 0 5rem #fff, 0 0 10rem #fff, 0 0 15rem #fff, 0 0 20rem #fff, 0 0 25rem #fff, 0 0 30rem #fff, 0 0 35rem #fff;
+}
+
+.bulb::before {
+	content: '';
+	position: absolute;
+	top: -5rem;
+	left: 2.25rem;
+	width: 3.5rem;
+	height: 8rem;
+	background:#444;
+	border-top: 3rem solid #000;
+	border-radius: 1rem;
+}
+
+.on .bulb::before {
+	background: #fff;
+}
+
+.on .bulb::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(50, -50%);
+	width: 12rem;
+	height: 12rem;
+	background: #fff;
+	border-radius: 50%;
+	filter: blur(4rem);
+}
+
+.bulb span:nth-child(1) {
+	position: absolute;
+	top: -1.6rem;
+	left: -.4rem;
+	display: block;
+	width: 3rem;
+	height: 3rem;
+	background: transparent;
+	transform: rotate(342deg);
+	border-bottom-right-radius: 4rem;
+	box-shadow: 2rem 2rem 0 1rem #444;
+}
+
+
+.on .bulb span:nth-child(1) {
+	box-shadow: 2rem 2rem 0 1rem #fff;
+}
+
+.bulb span:nth-child(2) {
+	position: absolute;
+	top: -1.6rem;
+	right: -.4rem;
+	display: block;
+	width: 3rem;
+	height: 3rem;
+	background: transparent;
+	transform: rotate(17deg);
+	border-bottom-left-radius: 4rem;
+	box-shadow: -2rem 2rem 0 1rem #444;
+}
+
+.on .bulb span:nth-child(2) {
+	box-shadow: -2rem 2rem 0 1rem #fff;
+}
+
+.wire {
+	position: absolute;
+	transform: translateX(4.7rem);
+	bottom: 50%;
+	width: .4rem;
+	height: 30rem;
+	background: #000;
+	z-index: 1;
+}
+
+.switch {
+	position: absolute;
+	bottom: 5rem;
+	right: 5rem;
+	width: 8rem;
+	height: 8rem;
+	background: linear-gradient(#eee, #ccc, #eee);
+	border: .3rem solid #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.switch .btn {
+	position: relative;
+	width: 2.5rem;
+	height: 4rem;
+	background: linear-gradient(#777, #fff, #777);
+	border-radius: .6rem;
+	cursor: pointer;
+}
+
+.switch .btn::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 80%;
+	background: linear-gradient(#fff, #fff);
+	border-radius: .4rem;
+}
+
+.on .switch .btn::before{
+	top: 20%;
+}
+.bulb:hover {
+	transform: rotate(5deg) translate(-1rem);
+}
+
+@media (max-width: 1200px) {
+	.light:nth-child(1), .light:nth-child(2) {
+		display: none;
+	}
+}
+
+@media (max-width: 992px) {
+	.light:nth-child(3), .light:nth-child(4) {
+		display: none;
+	}
+
+	.switch {
+		bottom: 4rem;
+		right: 4rem;
+		width: 7rem;
+		height: 7rem;
+		.btn {
+			width: 2.25rem;
+			height: 3.5rem;
+		}
+	}
+
+}
+
+@media (max-width: 767px) {
+	.light:nth-child(5) {
+		display: none;
+	}
+	.on .bulb {
+		box-shadow: 0 0 5rem #fff, 0 0 10rem #fff, 0 0 15rem #fff, 0 0 20rem #fff, 0 0 25rem #fff, 0 0 30rem #fff, 
+		0 0 35rem #fff, 0 0 40rem #fff, 0 0 45rem #fff, 0 0 50rem #fff;
+	}
+}
+
+@media (max-width: 576px) {
+	.bulb-animation {
+		min-height: 70rem;
+	}
+
+	.wire{
+		bottom: 57%;
+	}
+	.light:nth-child(6), .light:nth-child(7) {
+		display: none;
+	}
+	.on .bulb {
+		box-shadow: 0 0 5rem #fff, 0 0 10rem #fff, 0 0 15rem #fff, 0 0 20rem #fff, 0 0 25rem #fff, 0 0 30rem #fff, 
+		0 0 35rem #fff, 0 0 40rem #fff, 0 0 45rem #fff, 0 0 50rem #fff, 0 0 55rem #fff, 0 0 60rem #fff, 0 0 65rem #fff, 0 0 70rem #fff;
+	}
+}

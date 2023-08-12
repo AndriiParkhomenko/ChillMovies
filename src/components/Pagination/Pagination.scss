@@ -1,0 +1,28 @@
+.pagination-main {
+	display: flex;
+}
+
+.pagination-content {
+	transform: scale(1.5);
+}
+
+@media (max-width: 1400px) {
+	.pagination-content {
+		transform: scale(1.25);
+	}
+}
+
+@media (max-width: 767px) {
+	.pagination-main nav ul li {
+		width: 3.5rem;
+	}
+	.pagination-content {
+		transform: none;
+	}
+}
+
+@media (max-width: 576px) {
+	.pagination-main nav ul li {
+		width: 2.5rem;
+	}
+}

@@ -1,0 +1,28 @@
+@import '../../styles/variables.scss';
+
+.account-page {
+	margin: 5rem 0;
+
+	&__info{
+		margin-bottom: 3rem;
+		span {
+			margin-left: 1rem;
+		}
+	}
+
+	&__favorite {
+		margin-bottom: 5rem;
+		h2 {
+			margin-bottom: 2rem;
+		}
+	}
+
+}
+.logout-account{
+	margin-bottom: 3rem;
+}
+
+.delete-account {
+	display: block;
+	color: red;
+}

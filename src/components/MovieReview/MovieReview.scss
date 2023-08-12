@@ -1,0 +1,254 @@
+@import '../../styles/variables.scss';
+
+.latest-review {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	background: $background_second;
+	gap: 10rem;
+	padding: 10rem 15%;
+	margin: 0 auto 10rem;
+
+	&__image {
+		position: relative;
+		max-width: 50rem;
+		&::after{
+			content: '';
+				background: url('../../../public/images/bg_decor/branch.png') left no-repeat;
+				position: absolute;
+				width: 40rem;
+				height: 40rem;
+				bottom: -25rem;
+				left: 3rem;
+				z-index: 2;
+		}
+		img {
+			position: relative;
+			max-width: 100%;
+			z-index: 3;
+		}
+	}
+
+	&__info {
+		max-width: 40rem;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__headline {
+		position: relative;
+		font-size: 4rem;
+		text-transform: capitalize;
+		margin-bottom: 7rem;
+		&::after {
+			content: '';
+			background: url('../../../public/images/bg_decor/wave.svg') left no-repeat;
+			position: absolute;
+			width: 5rem;
+			height: 5rem;
+			left: 0;
+			bottom: -4rem;
+		}
+	}
+
+	&__author {
+		font-family: $font_secondary;
+		text-transform: uppercase;
+		font-size: 1.4rem;
+		color: $author;
+		letter-spacing: 0.16rem;
+		margin-bottom: 3rem;
+
+	}
+
+	&__title {
+		font-size: 2.75rem;
+		text-transform: capitalize;
+		margin-bottom: 1rem;
+	}
+
+	&__description {
+		font-family: $font_secondary;
+		font-size: 1.6rem;
+		color: $book_description;
+		letter-spacing: 0.02rem;
+		line-height: 208%;
+		margin-bottom: 7rem;
+	}
+
+	&__button {
+		max-width: 12.5rem;
+		margin: 0;
+		padding: 0;
+		border: none;
+		background: $background_second;
+		font-size: 1.8rem;
+		text-align: left;
+		span {
+			background: url('../../../public/images/icons/arrow.svg') right no-repeat;
+			padding-left: 2rem;
+		}
+	}
+}
+
+@media (max-width: 1400px) {
+	.latest-review {
+	gap: 8rem;
+		&__image {
+			max-width: 40rem;
+		}
+	
+		&__info {
+			max-width: 35rem;
+		}
+	
+		&__headline {
+			font-size: 3.5rem;
+			margin-bottom: 7rem;
+		}
+	
+		&__author {
+			font-size: 1.2rem;
+		}
+	
+		&__title {
+			font-size: 2.25rem;
+		}
+	
+		&__description {	
+			font-size: 1.4rem;
+		}
+	
+		&__button {
+			font-size: 1.6rem;
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.latest-review {
+		padding: 8rem;
+		margin: 0 auto 8rem;
+		gap: 4rem;
+	
+		&__image {
+			max-width: 35rem;
+			&::after{
+				transform: scale(.75);
+				bottom: -25rem;
+				left: 3rem;
+			}
+			img {
+				height: 25rem;
+			}
+		}
+	
+		&__info {
+			width: 30rem;
+		}
+	
+		&__headline {
+			font-size: 2.8rem;
+			margin-bottom: 3rem;
+			&::after {
+				width: 5rem;
+				height: 3rem;
+				bottom: -2rem;
+			}
+		}
+	
+		&__author {
+			font-size: 1rem;
+			margin-bottom: 2rem;
+		}
+	
+		&__title {
+			font-size: 2rem;
+		}
+	
+		&__description {	
+			font-size: 1.2rem;
+			margin-bottom: 3rem;
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.latest-review {
+		flex-direction: column-reverse;
+		margin: 0 auto 6rem;
+		gap: 4rem;
+	
+		&__image {
+			max-width: 30rem;
+			&::after{
+				transform: scale(.5);
+				left: -12.5rem;
+			}
+			img {
+				height: 20rem;
+			}
+		}
+
+		&__button {
+			font-size: 1.4rem;
+		}
+	}
+}
+
+@media (max-width: 767px) {}
+
+@media (max-width: 576px) {
+	.latest-review {
+		flex-direction: column-reverse;
+		padding: 4rem;
+		margin: 0 auto 4rem;
+		gap: 2rem;
+	
+		&__image {
+			width: 30rem;
+			max-width: none;
+			&::after{
+				transform: scale(.3);
+				bottom: -23rem;
+				left: -12.5rem;
+			}
+			img {
+				height: 20rem;
+			}
+		}
+
+		&__info {
+			width: 30rem;
+		}
+	
+		&__headline {
+			font-size: 2.6rem;
+			margin-bottom: 2rem;
+			&::after {
+				width: 5rem;
+				height: 3rem;
+				bottom: -2rem;
+			}
+		}
+	
+		&__author {
+			font-size: 1rem;
+			margin-bottom: 1rem;
+		}
+	
+		&__title {
+			font-size: 1.8rem;
+		}
+	
+		&__description {	
+			font-size: 1rem;
+			margin-bottom: 2rem;
+		}
+	
+		&__button {
+			font-size: 1.2rem;
+			max-width: 12.5rem;
+		}
+	}
+}

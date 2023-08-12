@@ -1,0 +1,232 @@
+@import '../../styles/variables.scss';
+
+.newsletter {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20rem;
+	padding: 14rem 0;
+	background: $background_second;
+	&::before {
+		content: '';
+		background: url('../../../public/images/bg_decor/bubbles.png') left no-repeat;
+		position: absolute;
+		width: 35rem;
+		height: 35rem;
+		left: 0;
+		top: 0;
+	}
+	&::after {
+		content: '';
+		background: url('../../../public/images/bg_decor/waves.png') right no-repeat;
+		position: absolute;
+		width: 23rem;
+		height: 19rem;
+		right: 0;
+		bottom: 0;
+	}
+
+	&__left {
+		position: relative;
+		max-width: 36rem;
+		font-size: 4.8rem;
+		line-height: 6.5rem;
+		text-transform: capitalize;
+		&::after {
+			content: '';
+			background: url('../../../public/images/bg_decor/wave.svg') center no-repeat;
+			position: absolute;
+			width: 5rem;
+			height: 5rem;
+			left: 0;
+			bottom: -2rem;
+		}
+	}
+
+	&__right {
+		max-width: 56rem;
+		font-size: 1.8rem;
+		color: $book_description;
+		z-index: 3;
+	}
+	
+	&__text {
+		line-height: 208%;
+		letter-spacing: 0.02rem;
+		margin-bottom: 4.5rem;
+	}
+
+	&__form {
+		position: relative;
+		max-width: 40rem;
+		display: flex;
+		flex-wrap: nowrap;
+		&::after{
+			content: '';
+			position: absolute;
+			width: 34rem;
+			height: 1px;
+			left: 0;
+			bottom: 0rem;
+			background-color: $form_underline;
+		}
+	}
+
+	&__input {
+		padding: 0;
+		margin: 0;
+		border: none;
+		text-transform: capitalize;
+		background-clip: none;
+		transition: none;
+		outline:none
+	}
+
+	&__button {
+		border:none;
+		background: transparent;
+		text-transform: uppercase;
+		padding:.75rem;
+		span{
+			background: url('../../../public/images/bg_decor/paper_plain.svg') right no-repeat;
+			padding-left: 2rem;
+		}
+	}
+}
+
+@media (max-width: 1400px) {
+	.newsletter{
+		gap: 15rem;
+		padding: 12rem 0;
+		&__left{
+			max-width: 30rem;
+			font-size: 4rem;
+			line-height: 5.5rem;
+		}
+
+		&__right{
+			font-size: 1.6rem;
+			max-width: 50rem;
+		}
+
+		&__text {
+			margin-bottom: 3.5rem;
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.newsletter{
+		gap: 10rem;
+		padding: 10rem 0;
+		&__left{
+			max-width: 24rem;
+			font-size: 3rem;
+			line-height: 4.5rem;
+		}
+
+		&__right{
+			max-width: 44rem;
+			font-size: 1.4rem;
+		}
+
+		&__text {
+			margin-bottom: 2.5rem;
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.newsletter{
+		gap: 5rem;
+		padding: 7.5rem 0;
+		&::before{
+			transform: scale(.75);
+			left: -4rem;
+			top: -5rem;
+		}
+		&::after{
+			transform: scale(.75);
+			right: -2rem;
+			bottom: -2rem;
+		}
+
+		&__right{
+			max-width: 38rem;
+			font-size: 1.2rem;
+		}
+
+		&__text {
+			margin-bottom: 1.4rem;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.newsletter{
+		gap: 3rem;
+		padding: 5rem 0;
+		flex-direction: column;
+		&::before{
+			transform: scale(.75);
+			left: -1rem;
+			top: -5rem;
+		}
+
+		&__left{
+			max-width: 22rem;
+			font-size: 2.6rem;
+			line-height: 4rem;
+			&::after {
+				left: 0;
+				bottom: -2.5rem;
+			}
+		}
+
+		&__text {
+			margin-bottom: 2rem;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.newsletter{
+		text-align: center;
+
+
+		&__left{
+			max-width: 20rem;
+			font-size: 2.4rem;
+			line-height: 3.5rem;
+			&::after {
+				left: 1rem;
+				bottom: -2.5rem;
+			}
+		}
+		
+		&__right {
+			max-width: 30rem;
+		}
+
+		&__form {
+			&::after{
+				content: '';
+				position: absolute;
+				width: 29rem;
+				height: 1px;
+				left: 0;
+				bottom: 0rem;
+				background-color: $form_underline;
+			}
+		}
+
+		&__input {
+			width: 22.5rem;
+		}
+
+		&__button{
+			padding: 0.75rem 0;
+		}
+	}
+}

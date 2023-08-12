@@ -1,0 +1,317 @@
+@import '../../styles/variables.scss';
+
+.articles {
+	margin: 10rem 0 5rem;
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		gap: 2rem;
+	}
+
+	&__bottom {
+		text-align: center;
+		.btn {
+			font-family: $font_secondary;
+			text-transform: uppercase;
+			letter-spacing: 0.1rem;
+			line-height: 220%;
+			span {
+				background: url('../../../public/images/icons/arrow.svg') right no-repeat;
+				padding-left: 2rem;
+			}
+			&:hover{
+				background-color: $background_second;
+			}
+		}
+	}
+}
+.content {
+	&__article {
+		flex: 0 1 40rem;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-bottom: 5rem;
+	}
+
+	&__image {
+		margin-bottom: 3rem;
+		img{
+			max-width: 100%;
+		}
+	}
+
+	&__info {
+		border-bottom: 1px solid $article_underline;
+		margin-bottom: 1.8rem;
+	}
+	
+	&__date {
+		font-size: 1.5rem;
+		letter-spacing: 0.06rem;
+		text-transform: capitalize;
+		color: $active_item;
+		margin-bottom: 1rem;
+	}
+
+	&__title {
+		font-size: 2.4rem;
+		line-height: 166%;
+		white-space: nowrap;
+		overflow-x: hidden;
+		text-overflow: ellipsis;
+		text-transform: capitalize;
+		margin-bottom: 1.5rem;
+		opacity: .5;
+		&:hover{
+			opacity: 1;
+		}
+	}
+
+	&__description {
+		font-family: $font_secondary;
+		height: 8rem;
+		overflow: hidden;
+		margin-bottom: 2.5rem;
+	}
+
+	&__inspiration{
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		p{
+			font-family: $font_secondary;
+			text-transform: uppercase;
+			color: $toolbar;
+		}
+		
+		.social__telegram  {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 1400px) {
+	.articles {
+		margin: 15rem 0 7rem;
+	}
+
+	.content {
+		&__article {
+			flex: 0 1 35rem;
+			margin-bottom: 5rem;
+		}
+
+		&__image {
+			img{
+				height: 25rem;
+			}
+		}
+
+		&__date {
+			font-size: 1.5rem;
+		}
+
+		&__title {
+			font-size: 2rem;
+		}
+
+		&__description {
+			font-size: 1.4rem;
+			margin-bottom: 2.25rem;
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	
+	.articles {
+		margin: 10rem 0 5rem 0;
+
+		&__bottom {
+			.btn {
+				font-size: 1rem;
+			}
+		}
+	}
+	
+	.content {
+		&__article {
+			margin-bottom: 3rem;
+		}
+
+		&__image {
+			img{
+				height: 20rem;
+			}
+		}
+
+		&__date {
+			font-size: 1.2rem;
+			margin-bottom: .75rem;
+		}
+		&__title {
+			font-size: 1.6rem;
+			margin-bottom: 1.25rem;
+		}
+
+		&__description {
+			height: 6rem;
+			font-size: 1.2rem;
+			margin-bottom: 2rem;
+		}
+
+		&__inspiration{
+			p {
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	
+	.articles {
+		margin: 7rem 0 3rem 0;
+		&__bottom {
+			.btn {
+				font-size: .9rem;
+			}
+		}
+	}
+	
+	.content {
+		&__article {
+			margin-bottom: 2rem;
+		}
+
+		&__image {
+			img{
+				height: 15rem;
+			}
+		}
+
+		&__info {
+			margin-bottom: 1.5rem;
+		}
+
+		&__date {
+			font-size: 1rem;
+		}
+		&__title {
+			font-size: 1.4rem;
+			margin-bottom: 1rem;
+		}
+
+		&__description {
+			height: 5.5rem;
+			font-size: 1rem;
+			margin-bottom: 1.5rem;
+		}
+
+		&__inspiration{
+			p {
+				font-size: 1rem;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	
+	.articles {
+		margin: 5rem 0 3rem 0;
+
+		&__content {
+			flex-direction: column;
+		}
+	}
+	
+	.content {
+		&__article {
+			width: 40rem;
+			flex: 0 1 40rem;
+			align-items: center;
+			margin: 0 auto 2rem;
+		}
+
+		&__image {
+			img{
+				height: 27rem;
+			}
+		}
+
+		&__info {
+			margin-bottom: .5rem;
+		}
+
+		&__date {
+			margin-bottom: .5rem;
+		}
+		&__title {
+			margin-bottom: .5rem;
+		}
+
+		&__description {
+			height: 4rem;
+			margin-bottom: 1rem;
+		}
+
+		&__inspiration{
+			p {
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.articles {
+		margin: 5rem 0 3rem 0;
+		&__bottom {
+			.btn {
+				font-size: .8rem;
+				padding: .5rem 1.5rem;
+			}
+		}
+	}
+	
+	.content {
+		&__article {
+			width: 30rem;
+			flex: 0 1 30rem;
+			align-items: center;
+			margin: 0 auto 2rem;
+		}
+
+		&__image {
+			img{
+				height: 20rem;
+			}
+		}
+
+		&__info {
+			margin-bottom: .5rem;
+		}
+
+		&__date {
+			margin-bottom: .5rem;
+		}
+		&__title {
+			margin-bottom: .5rem;
+		}
+
+		&__description {
+			height: 4rem;
+			margin-bottom: 1rem;
+		}
+
+		&__inspiration{
+			p {
+				font-size: 1.2rem;
+			}
+		}
+	}
+}

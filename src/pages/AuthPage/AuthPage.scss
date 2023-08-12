@@ -1,0 +1,166 @@
+@import '../../styles/variables.scss';
+
+.auth-page {
+	height: 100%;
+	padding: 5rem 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__form-wrapper {
+		max-width: 60rem;
+		width: 100%;
+		margin: 0 auto;
+		padding: 2.5rem;
+		border-radius: 1rem;
+		box-shadow: 0 0 0.8rem rgba(55, 55, 55, 0.3);
+	}
+
+	&__form {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	&__fieldset {
+		margin-bottom: 1rem;
+		border: 0;
+	}
+
+	&__legend {
+		width: 100%;
+		font-size: 2rem;
+		font-weight: 700;
+		text-align: center;
+		border-bottom: .1rem solid #ccc;
+		padding-bottom: 2rem;
+		margin-bottom: 2rem;
+	}
+
+	&__submit-button {
+		width: 100%;
+		text-align: center;
+		font-size: 1.6rem;
+	}
+
+	&__note-wrapper {
+		text-align: center;
+		margin-top: 1rem;
+		font-family: $font_secondary;
+		font-size: 1.8rem;
+	}
+
+	&__switch-button {
+		font-size: 1.6rem;
+		color: #000;
+		font-weight: bold;
+		background-color: $backgroung_main;
+		border: 0;
+		text-decoration: underline;
+		padding: 0 ;
+		&:hover, &:focus{
+			background-color: $backgroung_main;
+			text-decoration: none;
+			outline: none;
+		}
+	}
+
+	&__form-control{
+		margin: .5rem;
+	}
+}
+
+@media (max-width: 1400px) {
+	.auth-page {
+
+		&__form-wrapper {
+			padding: 1.5rem;
+		}
+
+		&__submit-button {
+			font-size: 1.4rem;
+		}
+	
+		&__note-wrapper {
+			text-align: center;
+			margin-top: 1rem;
+			font-family: $font_secondary;
+			font-size: 1.6rem;
+		}
+	
+		&__switch-button {
+			font-size: 1.4rem;
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.auth-page {
+		&__legend {
+			font-size: 1.8rem;
+			padding-bottom: 1.8rem;
+			margin-bottom: 1.8rem;
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.auth-page {
+		&__legend {
+			font-size: 1.6rem;
+			padding-bottom: 1.6rem;
+			margin-bottom: 1.6rem;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.auth-page {
+		&__legend {
+			font-size: 1.4rem;
+			padding-bottom: 1.4rem;
+			margin-bottom: 1.4rem;
+		}
+
+		&__note-wrapper {
+			font-size: 1.4rem;
+		}
+
+
+		&__switch-button {
+			font-size: 1.4rem;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.auth-page {
+		&__form-wrapper {
+			min-width: 25rem;
+			padding: 1.5rem .5rem;
+		}
+
+		&__form {
+			width: 95%;
+			margin: 0 auto;
+		}
+		
+		&__legend {
+			font-size: 1.4rem;
+			padding-bottom: 1.2rem;
+			margin-bottom: 1.2rem;
+		}
+
+		&__note-wrapper {
+			display: flex;
+			flex-direction: column;
+			gap: .5rem;
+			font-size: 1.2rem;
+		}
+
+
+		&__switch-button {
+			font-size: 1.2rem;
+		}
+	}
+}
+

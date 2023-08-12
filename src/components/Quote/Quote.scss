@@ -1,0 +1,122 @@
+@import '../../styles/variables.scss';
+
+.quote {
+	max-width: 73rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 15rem auto;
+
+	&__title {
+		position: relative;
+		font-size: 4.8rem;
+		margin-bottom: 7rem;
+		text-transform: capitalize;
+		&::after {
+			content: '';
+			background: url('../../../public/images/bg_decor/wave.svg') center no-repeat;
+			position: absolute;
+			width: 5rem;
+			height: 2rem;
+			left: calc(50% - 2.5rem);
+			bottom: -2rem;
+		}
+	}
+
+	&__text {
+		font-family: $font_secondary;
+		color: $book_description;
+		font-size: 2.6rem;
+		text-align: center;
+		line-height: 208%;
+		margin-bottom: 2rem;
+	}
+
+	&__author {
+		font-size: 2.2rem;
+	}
+}
+
+
+@media (max-width: 1200px) {
+	.quote {
+		max-width: 73rem;
+		margin: 10rem auto;
+	
+		&__title {
+			font-size: 4.4rem;
+			margin-bottom: 5rem;
+		}
+	
+		&__text {
+			font-size: 2rem;
+			margin-bottom: 2rem;
+		}
+	
+		&__author {
+			font-size: 2rem;
+		}
+	}
+	
+}
+
+@media (max-width: 992px) {
+	.quote {
+		max-width: 58rem;
+	
+		&__title {
+			font-size: 4rem;
+			margin-bottom: 4rem;
+		}
+	
+		&__text {
+			font-size: 1.6rem;
+			margin-bottom: 1.5rem;
+		}
+	
+		&__author {
+			font-size: 1.6rem;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.quote {
+		max-width: 48rem;
+	
+		&__title {
+			font-size: 3rem;
+			margin-bottom: 3rem;
+		}
+	
+		&__text {
+			font-size: 1.4rem;
+			margin-bottom: 1rem;
+		}
+	
+		&__author {
+			font-size: 1.4rem;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.quote {
+		max-width: 30rem;
+	
+		&__title {
+			font-size: 2rem;
+			margin-bottom: 2rem;
+		}
+	
+		&__text {
+			font-size: 1.2rem;
+			margin-bottom: 1rem;
+		}
+	
+		&__author {
+			font-size: 1.2rem;
+		}
+	}
+}

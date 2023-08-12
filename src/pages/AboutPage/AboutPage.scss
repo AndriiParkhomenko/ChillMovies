@@ -1,0 +1,161 @@
+@import '../../styles/variables.scss';
+
+.about {
+	margin: 1rem auto;
+}
+
+.about .headline {
+	margin-bottom: 2rem;
+}
+
+.about-content{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 2rem;
+	&__image{
+		max-width: 50%;
+		padding: 2.5rem;
+		background-color: $book_background;
+		img{
+			max-width: 100%;
+			height: 40rem;
+		}
+	}
+
+	&__text{
+		width: calc(50% - 10rem);
+		text-align: justify;
+		min-height: 25rem;
+		align-self: center;
+		font-size: 2rem;
+		margin: 0 5rem;
+	}
+}
+
+.about-animation {
+	height: 60rem;
+	margin-bottom: 2rem;
+}
+.result {
+	position: relative;
+	text-align: justify;
+	max-width: 90rem;
+	margin: -25rem auto 0;
+	font-size: 2rem;
+	z-index: 5;
+}
+
+@media (max-width: 1400px) {
+	.about-content{
+		&__image{
+			padding: 2rem;
+			img{
+				height: 35rem;
+			}
+		}
+	
+		&__text{
+			width: calc(50% - 6rem);
+			font-size: 2rem;
+			margin: 0 3rem;
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.about-content{
+		&__image{
+			padding: .5rem;
+			img{
+				height: 30rem;
+			}
+		}
+	
+		&__text{
+			width: calc(50% - 4rem);
+			font-size: 1.8rem;
+			margin: 0 2rem;
+		}
+	}
+
+	.result {
+		margin: -25rem 15rem 0;
+		font-size: 1.8rem;
+	}
+	
+
+}
+
+@media (max-width: 992px) {
+	.about-content{
+		flex-direction: column;
+		gap: 3rem;
+		&__image{
+			align-self: center;
+			max-width: 100%;
+			padding: 2.5rem;
+			img{
+				height: 35rem;
+			}
+		}
+		&__text{
+			width: 75%;
+			min-height: 20rem;
+		}
+	}
+	.stack {
+		flex-direction: column-reverse;
+	}
+
+	.result {
+		margin: -25rem 5rem 0;
+	}
+
+}
+
+@media (max-width: 767px) {
+	.about-content{
+		gap: 2rem;
+		&__image{
+			padding: 1.5rem;
+			img{
+				height: 30rem;
+			}
+		}
+		&__text{
+			min-height: 15rem;
+			font-size: 1.6rem;
+		}
+	}
+	.result {
+		margin: -25rem 5rem 0;
+		font-size: 1.6rem;
+	}
+}
+
+@media (max-width: 576px) {
+	.about-content{
+		gap: 2rem;
+		&__image{
+			padding: .5rem;
+			img{
+				max-width: 100%;
+				height: 20rem;
+			}
+		}
+		&__text{
+			width: 75%;
+			min-height: 10rem;
+			font-size: 1.4rem;
+		}
+	}
+
+	.about-animation{
+		margin-bottom: 10rem;
+	}
+
+	.result {
+		margin: -30rem 2.5rem 0;
+		font-size: 1.4rem;
+	}
+}
